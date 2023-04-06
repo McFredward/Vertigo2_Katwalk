@@ -1,23 +1,26 @@
-# BaS_Katwalk
-A KatWalk SDK integration mod into Blade&Sorcery **for U12**
+# Vertigo2_Katwalk
+A KatWalk SDK integration mod into Vertigo 2
 
 ## Features:
 
-
 * Uses official KatWalk SDK
 * Better speed integration based on the real-life speed on the KatWalk
-* Modifikations with the in-game mod menu for personal preferences
+* Modifikations within a new Tab-Menu "KatWalk" in the options
+* Auto recalibration
 
 ## How To Install & Use
 
-* Download the zip at [mod.io](https://mod.io/g/blade-and-sorcery/m/katwalk-sdk-integration) and unzip the folder into `Blade & Sorcery\BladeAndSorcery_Data\StreamingAssets\Mods` or directly install it using the in-game mod manager.
+* Download [MelonLoader](https://github.com/LavaGang/MelonLoader/releases) (at least version 0.6.0), open the downloaded Installer and Select the Game's .exe `Vertigo 2\vertigo2.exe`. Press `Install`.
+* Download the zip from [here](https://github.com/McFredward/Vertigo2_Katwalk/releases/tag/release) and unzip the files into `Vertigo 2\Mods`.
 * Start the KatWalk Gateway
-* **Turn the Walk- and Run-Source to None in the Gateway for B&S**, since the Gateway directly communicates with the game. There is no need to simulate the Joystick anymore and it could lead to unintended behavior.
+* **Turn the Walk- and Run-Source to None in the Gateway for Vertigo 2**, since the Gateway directly communicates with the game. There is no need to simulate the Joystick anymore and it could lead to unintended behavior.
 * Start the game
 
 ## Modification values
 
-soon
+* **Speed Multiplicator**: Modifies how the speed of the KatWalk is translated to the in-game speed.
+* **Speed max. Range**: Modifies what maximal ingame speed value corresponds to the maximal KatWalk speed.
+* **Speed curve exponent**: Modifies the speed curve which determines how fast the maximal speed is reached. 
 
 ## Known issues
 
@@ -26,6 +29,8 @@ soon
 ## Credits & Libs
 
 * Official KatWalk SDK
+* [HarmonyLib](https://github.com/pardeike/Harmony) using the MIT License
+* [MelonLoader](https://github.com/LavaGang/MelonLoader) using the Apache-2.0 license
 
 If you have any suggestions, feel free to open an Issue. Or contact me (McFredward) in the [KatWalk Discord](https://discord.gg/kat-vr-community-785305088465567824).
 
