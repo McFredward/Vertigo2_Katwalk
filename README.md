@@ -29,7 +29,7 @@ A KatWalk SDK integration mod into Vertigo 2
 
 ## Credits & Libs
 
-* Official KatWalk SDK
+* [Official KatWalk SDK](https://drive.google.com/drive/folders/1K_0q1YWth80dl7g8LF57xoSN1YndUvM-)
 * [HarmonyLib](https://github.com/pardeike/Harmony) using the MIT License
 * [MelonLoader](https://github.com/LavaGang/MelonLoader) using the Apache-2.0 license
 
