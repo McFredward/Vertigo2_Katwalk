@@ -15,6 +15,7 @@ A KatWalk SDK integration mod into Vertigo 2
 * Start the KatWalk Gateway
 * **Turn the Walk- and Run-Source to None in the Gateway for Vertigo 2**, since the Gateway directly communicates with the game. There is no need to simulate the Joystick anymore and it could lead to unintended behavior.
 * Start the game
+* Recommended to turn off joystick-turning in the options. Every time you use joystick-turning you have to recalibrate!
 
 ## Modification values
 
@@ -28,7 +29,7 @@ A KatWalk SDK integration mod into Vertigo 2
 
 ## Credits & Libs
 
-* Official KatWalk SDK
+* [Official KatWalk SDK](https://drive.google.com/drive/folders/1K_0q1YWth80dl7g8LF57xoSN1YndUvM-)
 * [HarmonyLib](https://github.com/pardeike/Harmony) using the MIT License
 * [MelonLoader](https://github.com/LavaGang/MelonLoader) using the Apache-2.0 license
 
