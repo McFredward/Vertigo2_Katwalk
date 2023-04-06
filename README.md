@@ -1,6 +1,10 @@
 # Vertigo2_Katwalk
 A KatWalk SDK integration mod into Vertigo 2
 
+<p align="center">
+  <img src="Vertigo2_Katwalk.png" width="50%" height="50%">
+</p>
+
 ## Features:
 
 * Uses official KatWalk SDK
