@@ -44,8 +44,10 @@ namespace Vertigo2_Katwalk
         private static TextMeshProUGUI label_text_Slider_SpeedMul;
         private static TextMeshProUGUI label_text_Slider_SpeedMaxRange;
         private static TextMeshProUGUI label_text_Slider_SpeedExponent;
+        private static TeleportSurface last_surface = null;
 
         private static float yawCorrection = 0.0f;
+        private static float old_MovingPlatform_angle = float.NaN;
 
         private static float speedMul;
         private static float speedMaxRange;
@@ -594,14 +596,14 @@ namespace Vertigo2_Katwalk
 
                     invoke_auto_calibrate = false;
                 }
-                
-                /* // Dont need to invoke the mothod in Vertigo 2
-                float walking_speed = ws.moveSpeed.z;
-                if (walking_speed != 0.0f)
+
+                //Reset old_MovingPlatform_angle if not on a moving platform anymore
+                if(last_surface != __instance.currentSurface)
                 {
-                    __instance.Move(new Vector3(0.0f, 0.0f, 0.0f)); //Invoke Move function if speed on KatWalk changes
+                    //MelonLogger.Msg("Surface changed!");
+                    last_surface = __instance.currentSurface;
+                    old_MovingPlatform_angle = float.NaN;
                 }
-                */
             }
         }
 
@@ -665,6 +667,29 @@ namespace Vertigo2_Katwalk
 
             return (float)(Math.Pow(normalized_input, (Double)speedExponent) * ((double)outputMax - (double)outputMin) + outputMin);
         }
-        
+
+
+        //Fix yawCorrection if player is on a moving platform which turns the player
+        [HarmonyPatch(typeof(MovingPlatform), "Update", new Type[] { })]
+        public static class MovingPlatform_Patch
+        {
+
+            [HarmonyPostfix]
+            public static void Postfix(MovingPlatform __instance)
+            {
+                VertigoCharacterController controller_instance = VertigoCharacterController.instance;
+                //MelonLogger.Msg("type: " + controller_instance.currentSurface.GetType().Name);
+                if (((UnityEngine.Object)controller_instance.currentSurface == (UnityEngine.Object)__instance)) //Player is on the moving platform
+                {
+                    if(!float.IsNaN(old_MovingPlatform_angle))
+                    {
+                        float difference = old_MovingPlatform_angle - __instance.transform.rotation.eulerAngles.y;
+                        yawCorrection += difference;
+                    }
+                    old_MovingPlatform_angle = __instance.transform.rotation.eulerAngles.y;
+                }
+            }
+        }
+
     }
 }
