@@ -10,7 +10,7 @@ A KatWalk SDK integration mod into Vertigo 2
 * Uses official KatWalk SDK
 * Better speed integration based on the real-life speed on the KatWalk
 * Modifikations within a new Tab-Menu "KatWalk" in the options
-* Auto recalibration
+* Auto recalibration on Loadingscreens
 
 ## How To Install & Use
 
