@@ -15,7 +15,7 @@ A KatWalk SDK integration mod into Vertigo 2
 ## How To Install & Use
 
 * Download [MelonLoader](https://github.com/LavaGang/MelonLoader/releases) (at least version 0.6.0), open the downloaded Installer and Select the Game's .exe `Vertigo 2\vertigo2.exe`. Press `Install`.
-* Download the zip from [here](https://github.com/McFredward/Vertigo2_Katwalk/releases/tag/release) and unzip the files into `Vertigo 2\Mods`.
+* Download the zip from [here](https://github.com/McFredward/Vertigo2_Katwalk/releases) and unzip the files into `Vertigo 2\Mods`.
 * Start the KatWalk Gateway
 * **Turn the Walk- and Run-Source to None in the Gateway for Vertigo 2**, since the Gateway directly communicates with the game. There is no need to simulate the Joystick anymore and it could lead to unintended behavior.
 * Start the game
@@ -30,7 +30,7 @@ A KatWalk SDK integration mod into Vertigo 2
 ## Known issues
 
 * Backwards walking is not working like with the Joystick emulation (seems like the SDK dont support it right now)
-* Interacting with vehicles that forcibly turn the player can cause a misalignment of the head and player rotation, requiring manual recalibration. I will continue to search for a better solution when time permits.
+* ~~Interacting with vehicles that forcibly turn the player can cause a misalignment of the head and player rotation, requiring manual recalibration. I will continue to search for a better solution when time permits.~~ Fixed in v.1.1.0
 
 ## Credits & Libs
 
