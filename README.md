@@ -1,6 +1,10 @@
 # Vertigo2_Katwalk
 A KatWalk SDK integration mod into Vertigo 2
 
+<p align="center">
+  <img src="Vertigo2_Katwalk.png" width="50%" height="50%">
+</p>
+
 ## Features:
 
 * Uses official KatWalk SDK
@@ -26,6 +30,7 @@ A KatWalk SDK integration mod into Vertigo 2
 ## Known issues
 
 * Backwards walking is not working like with the Joystick emulation (seems like the SDK dont support it right now)
+* Interacting with vehicles that forcibly turn the player can cause a misalignment of the head and player rotation, requiring manual recalibration. I will continue to search for a better solution when time permits.
 
 ## Credits & Libs
 
